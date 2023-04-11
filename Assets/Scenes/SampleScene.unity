@@ -5853,6 +5853,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1013604726}
   - component: {fileID: 1013604725}
+  - component: {fileID: 1013604727}
   m_Layer: 0
   m_Name: Dome
   m_TagString: Untagged
@@ -5927,6 +5928,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &1013604727
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013604724}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -9.49591, y: -4.54505}
+  - {x: -9.012553, y: -1.6498287}
+  - {x: -7.9689875, y: 0.5167932}
+  - {x: -6.8143344, y: 1.8856989}
+  - {x: -5.2636595, y: 3.156139}
+  - {x: -3.8961608, y: 3.9316678}
+  - {x: -2.34972, y: 4.4220934}
+  - {x: -1.0190111, y: 4.7251062}
+  - {x: 0.18584427, y: 4.74598}
+  - {x: 1.8469303, y: 4.593131}
+  - {x: 4.4046817, y: 3.717363}
+  - {x: 5.8293915, y: 2.7930255}
+  - {x: 7.767917, y: 0.76187336}
+  - {x: 8.904046, y: -1.5045588}
+  - {x: 9.365453, y: -3.153562}
+  - {x: 9.431292, y: -4.5452085}
+  - {x: 9.431292, y: -4.5452085}
+  - {x: 9.431292, y: -4.5452085}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &1732553962
 GameObject:
   m_ObjectHideFlags: 0
