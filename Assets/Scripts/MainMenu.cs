@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,12 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject Canvas;
+    public GameObject CanvasObject;
+    private Canvas Canvas;
     public bool IsPaused;
 
     public bool IsMenu;
     private void Start()
     {
+        Canvas = GetComponent<Canvas>();
+
         if (IsMenu)
         {
             PauseGame();
@@ -22,16 +26,14 @@ public class MainMenu : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.Escape) && IsPaused)
         {
-            if (IsPaused)
-            {
-                ResumeGame();
-            }
-            if (!IsPaused)
-            {
-                PauseGame();
-            }
+            ResumeGame();
+        }
+
+        if (Input.GetKey(KeyCode.Escape) && !IsPaused)
+        {
+            PauseGame();
         }
     }
     public void PlayGame()
@@ -44,14 +46,14 @@ public class MainMenu : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         IsPaused = false;
-        Canvas.SetActive(false);
+        CanvasObject.SetActive(false);
     }
 
     public void PauseGame()
     {
         Time.timeScale = 0.0f;
         IsPaused = true;
-        Canvas.SetActive(true);
+        CanvasObject.SetActive(true);
     }
 
     public void LoadMainMenu()
