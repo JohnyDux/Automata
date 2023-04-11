@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
 	public CharacterController controller;
 
 	public float runSpeed = 40f;
@@ -14,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 	bool crouch = false;
 	public Animator animator;
 
-    void Update()
+	void Update()
 	{
 
 		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
