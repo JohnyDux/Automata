@@ -15,9 +15,9 @@ public class Automata_Run : MonoBehaviour
 	void Start()
 	{
 		player = GameObject.FindGameObjectWithTag("Player").transform;
-		rb = animator.GetComponent<Rigidbody2D>();
-		boss = animator.GetComponent<Automata>();
-
+		rb = GetComponent<Rigidbody2D>();
+		animator = GetComponent<Animator>();
+		boss = GetComponent<Automata>();
 	}
 
 	void Update()
@@ -31,10 +31,9 @@ public class Automata_Run : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-		Debug.Log("Player Hit");
-
         if(collision.gameObject.tag == "Player")
         {
+			Debug.Log("Player Hit");
 			animator.SetBool("Attack", true);
 		}
     }
