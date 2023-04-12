@@ -5,21 +5,16 @@ using UnityEngine.UI;
 
 public class LifeManager : MonoBehaviour
 {
-    public GameObject LifeUI;
+    public PlayerHealth playerHealth;
 
-    PlayerHealth Player;
+    public Slider rt;
 
-    int health;
-
-    RectTransform rt;
     void Start()
     {
-        rt = LifeUI.GetComponent(typeof(RectTransform)) as RectTransform;
-        Player = GetComponent<PlayerHealth>();
+        rt.value = 100;
     }
     void Update()
     {
-        health = Player.health;
-        rt.sizeDelta = new Vector2(0, health);
+        rt.value = playerHealth.health;
     }
 }

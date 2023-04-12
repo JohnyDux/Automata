@@ -6071,24 +6071,12 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 1500
   m_WholeNumbers: 0
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 530187475}
-        m_TargetAssemblyTypeName: PlayerHealth, Assembly-CSharp
-        m_MethodName: TakeDamage
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &601219793
 GameObject:
   m_ObjectHideFlags: 0
@@ -6203,7 +6191,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80015dce02183274b9126160d18d6303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LifeUI: {fileID: 415524785}
+  playerHealth: {fileID: 530187475}
+  rt: {fileID: 531409268}
 --- !u!1 &645947803
 GameObject:
   m_ObjectHideFlags: 0

@@ -39,7 +39,7 @@ public class Automata_Run : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-			Debug.Log("Player Life: " + playerHealth.health);
+			//Debug.Log("Player Life: " + playerHealth.health);
 			animator.SetBool("Attack", true);
 			playerHealth.TakeDamage(damadge);
 		}
