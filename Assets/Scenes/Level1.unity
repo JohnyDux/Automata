@@ -5906,7 +5906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51588e1e3f185d146a53dde39a1bb8dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 300
+  m_JumpForce: 400
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
   m_AirControl: 1
@@ -6013,7 +6013,7 @@ RectTransform:
   m_GameObject: {fileID: 531409266}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.55807, y: 0.20927626, z: 0.55807}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2073065766}
@@ -6023,7 +6023,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 53.076416, y: 0}
+  m_AnchoredPosition: {x: 608, y: 274}
   m_SizeDelta: {x: -1033.8474, y: -416}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &531409268
