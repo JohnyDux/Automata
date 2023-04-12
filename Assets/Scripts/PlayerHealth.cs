@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour
 
 	public void TakeDamage(int damage)
 	{
-		health -= damage;
+		health = health - damage;
 
 		StartCoroutine(DamageAnimation());
 

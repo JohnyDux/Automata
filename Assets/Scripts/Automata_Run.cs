@@ -6,8 +6,14 @@ public class Automata_Run : MonoBehaviour
 {
 	public float speed = 2.5f;
 	public float attackRange = 3f;
+	public float distanceBetween = 1f;
+
+	public int damadge;
+
+	private float distance;
 
 	Transform player;
+	public PlayerHealth playerHealth;
 	Rigidbody2D rb;
 	Automata boss;
 	Animator animator;
@@ -29,12 +35,13 @@ public class Automata_Run : MonoBehaviour
 		rb.MovePosition(newPos);
 	}
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player")
         {
-			Debug.Log("Player Hit");
+			Debug.Log("Player Life: " + playerHealth.health);
 			animator.SetBool("Attack", true);
+			playerHealth.TakeDamage(damadge);
 		}
     }
 
