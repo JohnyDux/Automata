@@ -15,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
 
 	void Update()
 	{
-
 		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
 		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
@@ -34,7 +33,8 @@ public class PlayerMovement : MonoBehaviour
 			crouch = false;
 		}
 
-		Cursor.lockState = CursorLockMode.Confined;
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
 
 	}
 

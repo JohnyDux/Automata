@@ -6,57 +6,49 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject CanvasObject;
-    private Canvas Canvas;
-    public bool IsPaused;
+    public GameObject pauseMenu;
+    public static bool isPaused;
 
-    public bool IsMenu;
-    private void Start()
+    void Start()
     {
-        Canvas = GetComponent<Canvas>();
+        pauseMenu.SetActive(false);
+    }
 
-        if (IsMenu)
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            PauseGame();
-        }
-        if (!IsMenu)
-        {
-            ResumeGame();
+            if (isPaused)
+            {
+                ResumeGame();
+            }
+            else
+            {
+                PauseGame();
+            }
         }
     }
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.Escape) && IsPaused)
-        {
-            ResumeGame();
-        }
 
-        if (Input.GetKey(KeyCode.Escape) && !IsPaused)
-        {
-            PauseGame();
-        }
-    }
     public void PlayGame()
     {
         SceneManager.LoadScene("Level1");
-        IsPaused = false;
-    }
-
-    public void ResumeGame()
-    {
-        Time.timeScale = 1.0f;
-        IsPaused = false;
-        CanvasObject.SetActive(false);
     }
 
     public void PauseGame()
     {
-        Time.timeScale = 0.0f;
-        IsPaused = true;
-        CanvasObject.SetActive(true);
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
     }
 
-    public void LoadMainMenu()
+    public void ResumeGame()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
+    }
+
+    public void LoadMenu()
     {
         SceneManager.LoadScene("Main Menu");
     }
