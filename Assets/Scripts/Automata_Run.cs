@@ -10,7 +10,7 @@ public class Automata_Run : MonoBehaviour
 
 	public int damage;
 
-	private float distance;
+	public float distance;
 
 	GameObject player;
 	public PlayerHealth playerHealth;
@@ -27,8 +27,7 @@ public class Automata_Run : MonoBehaviour
 		distance = Vector2.Distance(transform.position, player.transform.position);
 		Vector2 direction = player.transform.position - transform.position;
 		direction.Normalize();
-		float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-		transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+		transform.position = Vector2.MoveTowards(transform.position, player.transform.position, attackRange);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
