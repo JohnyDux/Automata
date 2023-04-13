@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class LifeBoost : MonoBehaviour
 {
-    public PlayerHealth playerHealth;
-    public int PlusLife;
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
-        {
-            playerHealth.TakeDamage(-PlusLife);
-        }
+        PlayerHealth GO;
 
-        Destroy(this.gameObject);
+        if(collision.CompareTag("Player"))
+        {
+            GO = collision.gameObject.GetComponent<PlayerHealth>();
+
+            if (GO.health < 1500)
+            {
+                int diference = 1500 - GO.health;
+                GO.TakeDamage(-diference);
+                Destroy(gameObject);
+
+                Debug.Log("Given Life");
+            }
+        }
     }
 }

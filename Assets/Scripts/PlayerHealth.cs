@@ -5,11 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-	public int health = 100;
+	public int health;
 
 	public GameObject deathEffect;
 
-	public void TakeDamage(int damage)
+    private void Start()
+    {
+		health = 1500;
+	}
+
+    public void TakeDamage(int damage)
 	{
 		health = health - damage;
 
