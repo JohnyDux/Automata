@@ -8,40 +8,35 @@ public class Automata_Run : MonoBehaviour
 	public float attackRange = 3f;
 	public float distanceBetween = 1f;
 
-	public int damadge;
+	public int damage;
 
 	private float distance;
 
-	Transform player;
+	GameObject player;
 	public PlayerHealth playerHealth;
-	Rigidbody2D rb;
-	Automata boss;
 	Animator animator;
 
 	void Start()
 	{
-		player = GameObject.FindGameObjectWithTag("Player").transform;
-		rb = GetComponent<Rigidbody2D>();
+		player = GameObject.FindGameObjectWithTag("Player");
 		animator = GetComponent<Animator>();
-		boss = GetComponent<Automata>();
 	}
 
-	void Update()
-	{
-		boss.LookAtPlayer();
-
-		Vector2 target = new Vector2(player.position.x, rb.position.y);
-		Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
-		rb.MovePosition(newPos);
-	}
+    void Update()
+    {
+		distance = Vector2.Distance(transform.position, player.transform.position);
+		Vector2 direction = player.transform.position - transform.position;
+		direction.Normalize();
+		float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+		transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player")
         {
-			//Debug.Log("Player Life: " + playerHealth.health);
 			animator.SetBool("Attack", true);
-			playerHealth.TakeDamage(damadge);
+			playerHealth.TakeDamage(damage);
 		}
     }
 
