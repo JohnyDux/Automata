@@ -718,7 +718,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 3
 --- !u!1 &187073677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,7 +1244,7 @@ MonoBehaviour:
   m_Follow: {fileID: 530187466}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 18.6
+    OrthographicSize: 15.07
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -1936,7 +1936,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 18.6
+  orthographic size: 15.07
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1960,7 +1960,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.90011126, y: 5.7151885, z: -10}
+  m_LocalPosition: {x: -2.6062288, y: 7.1425548, z: -10}
   m_LocalScale: {x: 0.74367, y: 0.74367, z: 0.74367}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8011,7 +8011,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 03e7d0ad852130742b688db0b3e91906, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 429517ea1b1287a47952cd5cd8261d74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8031,7 +8031,7 @@ Transform:
   m_GameObject: {fileID: 878066460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 7.25, z: 0}
-  m_LocalScale: {x: 88.297, y: 88.297, z: 88.297}
+  m_LocalScale: {x: 1.6878228, y: 1.6878228, z: 1.6878228}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
