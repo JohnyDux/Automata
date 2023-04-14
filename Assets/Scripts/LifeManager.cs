@@ -15,6 +15,6 @@ public class LifeManager : MonoBehaviour
     }
     void Update()
     {
-        rt.value = playerHealth.health;
+        rt.value = (float)playerHealth.health;
     }
 }

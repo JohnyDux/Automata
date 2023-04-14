@@ -2,28 +2,59 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
 	public int health;
 
+	public bool invincibility;
+
+	public TextMeshProUGUI invincibilityText;
+
 	public GameObject deathEffect;
+
+	public bool IsAttacking;
 
     private void Start()
     {
+		IsAttacking = false;
 		health = 1500;
+	}
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F) && invincibility == false)
+		{
+			invincibility = true;
+			invincibilityText.color = Color.green;
+        }
+		else if (Input.GetKeyDown(KeyCode.F) && invincibility == true)
+		{
+			invincibility = false;
+			invincibilityText.color = Color.white;
+		}
 	}
 
     public void TakeDamage(int damage)
 	{
-		health = health - damage;
+		IsAttacking = true;
 
-		StartCoroutine(DamageAnimation());
-
-		if (health <= 0)
+		if (invincibility == false)
 		{
-			Die();
+			health = health - damage;
+
+			StartCoroutine(DamageAnimation());
+
+			if (health <= 0)
+			{
+				Die();
+			}
 		}
+        else
+        {
+			health = 1500;
+        }
 	}
 
 	void Die()

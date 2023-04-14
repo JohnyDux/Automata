@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Automata_Drill : MonoBehaviour
 {
-	public int attackDamage = 20;
-	public int enragedAttackDamage = 40;
+	public int attackDamage = 2;
+	public int enragedAttackDamage = 4;
 
 	public Vector3 attackOffset;
 	public float attackRange = 1f;
