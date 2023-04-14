@@ -588,6 +588,7 @@ GameObject:
   - component: {fileID: 163776709}
   - component: {fileID: 163776712}
   - component: {fileID: 163776711}
+  - component: {fileID: 163776713}
   m_Layer: 0
   m_Name: Hammer
   m_TagString: Untagged
@@ -695,6 +696,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb288369ed9f7254e9f7110e82c279db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 0}
+  HitIntensity: 5
+--- !u!50 &163776713
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163776708}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &187073677
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,8 +850,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: PAUSED
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cf12728ab7522b64ea29d677b9155c49, type: 2}
+  m_sharedMaterial: {fileID: -6505593302100275847, guid: cf12728ab7522b64ea29d677b9155c49, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -994,8 +1018,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Robot
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b6ce2793bc75291429f3e66ac5af2ae2, type: 2}
+  m_sharedMaterial: {fileID: -2222613402966566885, guid: b6ce2793bc75291429f3e66ac5af2ae2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13568,8 +13592,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Player
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b6ce2793bc75291429f3e66ac5af2ae2, type: 2}
+  m_sharedMaterial: {fileID: -2222613402966566885, guid: b6ce2793bc75291429f3e66ac5af2ae2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14037,8 +14061,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: F - Invincibility
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b6ce2793bc75291429f3e66ac5af2ae2, type: 2}
+  m_sharedMaterial: {fileID: -2222613402966566885, guid: b6ce2793bc75291429f3e66ac5af2ae2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14062,8 +14086,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 27.15
+  m_fontSizeBase: 27.15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -14396,8 +14420,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b6ce2793bc75291429f3e66ac5af2ae2, type: 2}
+  m_sharedMaterial: {fileID: -2222613402966566885, guid: b6ce2793bc75291429f3e66ac5af2ae2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15167,8 +15191,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: R - Run
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b6ce2793bc75291429f3e66ac5af2ae2, type: 2}
+  m_sharedMaterial: {fileID: -2222613402966566885, guid: b6ce2793bc75291429f3e66ac5af2ae2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15192,8 +15216,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 27.15
+  m_fontSizeBase: 27.15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
