@@ -21,7 +21,6 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
 		walkSpeed = 5f;
-
 	}
 
     private void Update()
@@ -60,8 +59,8 @@ public class PlayerMovement : MonoBehaviour
 			crouch = false;
 		}
 
-		Cursor.lockState = CursorLockMode.Locked;
-		Cursor.visible = false;
+		//Cursor.lockState = CursorLockMode.Confined;
+		//Cursor.visible = true;
 
 	}
 

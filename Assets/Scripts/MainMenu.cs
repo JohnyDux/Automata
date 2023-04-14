@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
-    public static bool isPaused;
+    public bool isPaused;
 
     void Start()
     {
@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             if (isPaused)
             {
@@ -32,10 +32,15 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene("Level1");
+        Time.timeScale = 1.0f;
+        //Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void PauseGame()
     {
+        //Cursor.visible = true;
+        //Cursor.lockState = CursorLockMode.Confined;
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
@@ -43,6 +48,8 @@ public class MainMenu : MonoBehaviour
 
     public void ResumeGame()
     {
+        //Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
@@ -51,6 +58,8 @@ public class MainMenu : MonoBehaviour
     public void LoadMenu()
     {
         SceneManager.LoadScene("Main Menu");
+        //Cursor.visible = true;
+        //Cursor.lockState = CursorLockMode.Confined;
     }
 
     public void QuitGame()
