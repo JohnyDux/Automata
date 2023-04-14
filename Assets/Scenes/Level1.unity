@@ -1089,7 +1089,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163776708}
   m_LocalRotation: {x: -0, y: -0, z: -0.8841871, w: 0.46713293}
-  m_LocalPosition: {x: -21.43, y: -2.32, z: 0}
+  m_LocalPosition: {x: -21.43, y: -1.7038906, z: 0}
   m_LocalScale: {x: 3.5721, y: 3.5721, z: 3.5721}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3856,7 +3856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eb2153f83a43584dab4321515bf817a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 530187475}
   AmountToSpawn: 1
   Positions:
   - {fileID: 1031554880}
@@ -3866,7 +3866,7 @@ MonoBehaviour:
   - {fileID: 1001928609}
   c: {fileID: 664013916}
   toSpawn: {fileID: 7833207782665039775, guid: fd1fbf8cc995a72448c09059eb5d39c6, type: 3}
-  spawnRate: 10
+  spawnRate: 4
 --- !u!4 &664013915
 Transform:
   m_ObjectHideFlags: 0
@@ -3875,7 +3875,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 664013913}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.18, y: 11.06, z: -0.107852936}
+  m_LocalPosition: {x: 0.18, y: 11.676109, z: -0.107852936}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9322,7 +9322,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 825194193}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.252, y: -7.3481, z: 0}
+  m_LocalPosition: {x: -0.252, y: -7.51, z: 0}
   m_LocalScale: {x: 24.657005, y: 5.5278606, z: 0.84317034}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16422,7 +16422,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1396258640}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.36, y: 8.661, z: 0.26944494}
+  m_LocalPosition: {x: -12.36, y: 9.277109, z: 0.26944494}
   m_LocalScale: {x: 2.1225, y: 2.1225, z: 2.1225}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16474,6 +16474,7 @@ MonoBehaviour:
   Fish_Prefab: {fileID: 7258106282416939358, guid: 030848ee3848de84193fb7f3b053f487, type: 3}
   Spawn_Position: {fileID: 352822719}
   ref_script: {fileID: 1663149575}
+  num_fish: 0
   textObject: {fileID: 367622740}
 --- !u!1 &1431277077
 GameObject:
@@ -16636,7 +16637,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457692090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9117448, y: 2.8638906, z: -0.26242447}
+  m_LocalPosition: {x: 2.9117448, y: 3.48, z: -0.26242447}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16690,7 +16691,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470620610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.4788938, y: 3.1325467, z: -0.27737808}
+  m_LocalPosition: {x: 7.4788938, y: 3.748656, z: -0.27737808}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

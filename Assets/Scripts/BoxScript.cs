@@ -16,12 +16,17 @@ public class BoxScript : MonoBehaviour
     private void Start()
     {
         num_fish = 0;
+        Fish_Prefab.SetActive(false);
     }
 
     private void Update()
     {
-        Fish_Prefab.gameObject.SetActive(false);
         textObject.text = num_fish.ToString();
+
+        if(num_fish > 0)
+        {
+            Fish_Prefab.SetActive(true);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -11,8 +11,6 @@ public class BoostSpawner : MonoBehaviour
     public BoxCollider2D c;
     public GameObject toSpawn;
 
-    List<Transform> Points;
-
     [Header("Intervals of spawning(in seconds)")]
     public float spawnRate;
 
