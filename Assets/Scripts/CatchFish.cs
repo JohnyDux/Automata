@@ -24,5 +24,4 @@ public class CatchFish : MonoBehaviour
             NumberOfFish=NumberOfFish+1;
         }
     }
-
 }

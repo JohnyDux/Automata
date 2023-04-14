@@ -17,8 +17,6 @@ public class LifeBoost : MonoBehaviour
                 int diference = 1500 - GO.health;
                 GO.TakeDamage(-diference);
                 Destroy(gameObject);
-
-                Debug.Log("Given Life");
             }
         }
     }
