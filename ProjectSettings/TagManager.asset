@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ladder
   - Spawnable
+  - Ground
+  - Hammer
   layers:
   - Default
   - TransparentFX
